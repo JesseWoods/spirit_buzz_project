@@ -1,0 +1,29 @@
+{% load static %}
+{% include 'tags/navigation.html' %}
+
+<body>
+
+
+            <div id="content" align="center">
+            <div id="logintagline" align="center"></div>
+
+
+            <form id="login_form" method="post" action="/spiritbuzz/login/">
+            {% csrf_token %}
+            USERNAME <input type="text" name="username" value="" size="50" /><br />
+            PASSWORD <input type="password" name="password" value="" size="50" /><br />
+            <input type="submit" value="submit" />
+            </form>
+
+            <div id="registerhere">
+            <a href="/spiritbuzz/register/">Don't have an account? Register here.</a>
+            </div>
+
+
+	<div id="footer">
+    SPIRITBUZZ ©2014
+    </div>
+
+</div>
+</body>
+</html>

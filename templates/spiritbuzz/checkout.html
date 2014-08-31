@@ -1,0 +1,398 @@
+{% load static %}
+{% include 'tags/navigation.html' %}
+
+
+        <div id="content">
+        <div class="container">
+        <div id="shoppingcartline">CHECKOUT!</div>
+
+
+        <div id="checkoutform">
+
+        <form action = "." method = "post"> <input type='hidden' name='csrfmiddlewaretoken' value='uqROITloVqCF14vxPph3y4NJ3gTZQRBM' />
+         <div id="chckoutleft">
+        <fieldset class = "Checkout">
+        <legend>Contact Info</legend>
+
+        <table>
+        <tr>
+        <th>
+        <label for="id_email">EMAIL</label>
+        </th>
+
+        <td>
+        <input id="id_email" maxlength="50" name="email" size="30" type="email" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+
+        <label for="id_phone">PHONE</label>
+        </th>
+
+        <td>
+        <input id="id_phone" maxlength="20" name="phone" size="30" type="text" />
+        </td>
+        </tr>
+        </table>
+        </fieldset>
+
+        <fieldset class = "Checkout">
+        <legend>SHIPPING INFO</legend>
+        <table>
+        <tr>
+        <th>
+
+        <label for="id_shipping_name">Shipping name</label>
+        </th>
+        <td>
+
+        <input id="id_shipping_name" maxlength="50" name="shipping_name" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+
+        <label for="id_shipping_address_1">Shipping address 1</label>
+        </th>
+        <td>
+
+        <input id="id_shipping_address_1" maxlength="50" name="shipping_address_1" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+
+        <label for="id_shipping_address_2">Shipping address 2</label>
+        </th>
+        <td>
+
+        <input id="id_shipping_address_2" maxlength="50" name="shipping_address_2" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_shipping_city">SHIPPING CITY</label>
+        </th>
+        <td>
+        <input id="id_shipping_city" maxlength="50" name="shipping_city" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_shipping_state">SHIPPING STATE</label>
+        </th>
+
+        <td>
+
+        <select id="id_shipping_state" name="shipping_state" size="1">
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="ME">ME</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MO">MO</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+        </select>
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_shipping_zip">SHIPPING ZIP</label>
+        </th>
+        <td>
+
+        <input id="id_shipping_zip" maxlength="10" name="shipping_zip" size="6" type="text" />
+        </td>
+        </tr>
+
+        </table>
+        </fieldset>
+        </div>
+
+
+    <div id="chckoutright">
+        <fieldset class = "Checkout">
+
+        <legend>BILLING INFO</legend>
+        <table>
+        <tr>
+        <th>
+        <label for="id_billing_name">BILLING NAME</label>
+        </th>
+        <td>
+
+        <input id="id_billing_name" maxlength="50" name="billing_name" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_billing_address_1">Billing address 1</label>
+        </th>
+        <td>
+
+        <input id="id_billing_address_1" maxlength="50" name="billing_address_1" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_billing_address_2">Billing address 2</label>
+        </th>
+
+        <td>
+        <input id="id_billing_address_2" maxlength="50" name="billing_address_2" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_billing_city">Billing city</label>
+        </th>
+
+        <td>
+        <input id="id_billing_city" maxlength="50" name="billing_city" size="30" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_billing_state">Billing state</label>
+        </th>
+
+        <td>
+        <select id="id_billing_state" name="billing_state" size="1">
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="ME">ME</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MO">MO</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+        </select>
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_billing_zip">Billing zip</label>
+        </th>
+
+        <td>
+        <input id="id_billing_zip" maxlength="10" name="billing_zip" size="6" type="text" />
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+        <label for="id_billing_country">Billing country</label>
+        </th>
+
+        <td>
+        <input id="id_billing_country" maxlength="50" name="billing_country" size="30" type="text" />
+        </td>
+        </tr>
+        </table>
+        </fieldset>
+
+
+        <fieldset class = "Checkout">
+        <legend>Credit Card Info</legend>
+        <table>
+        <tr>
+        <th>
+
+        <label for="id_credit_card_number">Credit card number</label>
+        </th>
+        <td>
+
+        <input id="id_credit_card_number" name="credit_card_number" size="30" type="text" />
+        </td>
+        </tr>
+        <tr>
+        <th>
+
+        <label for="id_credit_card_type">Credit card type</label>
+        </th>
+        <td>
+
+        <select id="id_credit_card_type" name="credit_card_type" size="1">
+        <option value="Mastercard">Mastercard</option>
+        <option value="VISA">VISA</option>
+        <option value="AMEX">AMEX</option>
+        <option value="Discover">Discover</option>
+        </select>
+        </td>
+        </tr>
+        <tr>
+        <th>
+
+        <label for="id_credit_card_expire_month">expiration month</label>
+        </th>
+        <td>
+
+        <select id="id_credit_card_expire_month" name="credit_card_expire_month" size="1">
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+        </select>
+        </td>
+        </tr>
+        <tr>
+        <th>
+        <label for="id_credit_card_expire_year">expiration year</label>
+        </th>
+        <td>
+
+        <select id="id_credit_card_expire_year" name="credit_card_expire_year" size="1">
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        </select>
+        </td>
+        </tr>
+
+        <tr>
+        <th>
+
+        <label for="id_credit_card_cvv">Credit card cvv</label>
+        </th>
+        <td>
+
+        <input id="id_credit_card_cvv" name="credit_card_cvv" size="5" type="text" />
+        </td>
+        </tr>
+        </table>
+
+        <table>
+        <tr>
+        <th colspan = "2">
+        <input type = "submit" value = "Place Order" class = "submit"/>
+        </th>
+        </tr>
+        </table>
+        </form>
+        </fieldset>
+        </div>
+
+        </div>
+        </div>
+        </div>
+
+    	<div id="footer">
+        SPIRITBUZZ ©2014
+        </div>
+
+        </body>
+        </html>

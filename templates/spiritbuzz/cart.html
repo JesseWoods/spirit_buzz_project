@@ -1,0 +1,100 @@
+{% load static %}
+{% include 'tags/navigation.html' %}
+
+<body>
+                <div id="page">
+
+                <div id="content" align="center">
+                <div id="shoppingcartline">YOUR CART!</div>
+
+                <div class="main">
+                <section class="shopping-cart">
+
+                {% load catalog_filters %}
+                {% block content %}
+
+
+             <table summary = "Your Shopping Cart"  id = "shopping_cart">
+
+
+                <thead><tr>
+                <th scope = "col">Product</th>
+                <th scope = "col">Price</th>
+                <th scope= "col">Quantity</th>
+                <th></th>
+                <th></th>
+                <th scope = "col" class = "right">Total</th>
+                </tr></thead>
+
+
+                <tfoot>
+                <tr>
+                <th class = "right" colspan = "1">Cart Subtotal:</th>
+                <th class = "right">{{ cart_subtotal|currency }}</th>
+                </tr>
+                {% if cart_items %}
+
+                <tr>
+                <th class= "right" colspan = "1">
+                <a href="/spiritbuzz/checkout/"><input type="submit" name="submit" value="Checkout" size="50" /></a>
+                </th>
+                </tr>
+                {% endif %}
+                </tfoot>
+
+                <tbody>
+                {% if cart_items %}
+                {% for item in cart_items %}
+
+                <tr><td>
+                    <a href = "/spiritbuzz/category/{{item.product.category.slug}}/product/{{item.product.slug}}/" class = "cart">
+                        {{item.name}}
+                    </a>
+                </td>
+                    <td>{{ item.price|currency }}</td>
+                    <td class = "right"><form method = "post" action = "." class = "cart">{% csrf_token %}
+
+                        <input type = "text" name = "quantity" value = "{{ item.quantity }}" id = "quantity" class = "quantity"/>
+                        <input type = "hidden" name = "item_id" value = "{{ item.id }}"/>
+                        </td>
+
+
+                            <td>
+                            <input type = "submit" name = "submit" value = "Update"/>
+                            </form>
+                            </td>
+
+                            <td>
+                            <form method = "post" action = "." class = "cart">{% csrf_token %}
+                            <input type = "hidden" name = "item_id" value = "{{ item.id }}"/>
+                            <input type = "submit" name = "submit" value = "Remove"/>
+                            </form>
+                            </td>
+
+                            <td class = "right">{{ item.total|currency }}</td>
+                    </tr>
+                {% endfor %}
+                {% else %}
+
+                            <tr>
+                            <td colspan = "6" style = "height:30px;">Your Cart is Empty.</td>
+                            </tr>
+                {% endif %}
+                            </tbody>
+
+                             </table>
+
+                {% endblock %}
+
+                         </section>
+                        </div>
+                         </div>
+
+
+
+        <div id="footer">
+        SPIRITBUZZ ©2014
+        </div>
+
+</div>
+</body>

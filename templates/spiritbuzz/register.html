@@ -1,0 +1,46 @@
+{% load static %}
+{% include 'tags/navigation.html' %}
+
+
+
+                <div id="content" align="center">
+                <div id="logintagline" align="center"> </div>
+
+                {% if registered %}
+                Thank you for registering!
+                <a href="/spiritbuzz/">Return to the homepage.</a><br />
+                {% else %}
+                <br />
+
+                <form id="user_form" method="post" action="/spiritbuzz/register/"
+                enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+            <!-- Display each form. The as_p method wraps each element in a paragraph
+                 (<p>) element. This ensures each element appears on a new line,
+                 making everything look neater. -->
+
+Username<input type="id_username" maxlength="30" name="username" />
+<p><span class="helptext">Required. 30 characters or fewer. Letters, numbers and @/./+/-/_ characters</span></p>
+
+Email address<input id="id_email" maxlength="75" name="email" type="email" />
+Password<input id="id_password" name="password" type="password" />
+
+
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" name="submit" value="Register" />
+            </form>
+            {% endif %}
+            </div>
+
+
+        	<div id="footer">
+            SPIRITBUZZ ©2014
+            </div>
+
+</body>
+</html>
+
+

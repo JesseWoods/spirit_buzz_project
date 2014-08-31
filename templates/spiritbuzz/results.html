@@ -1,0 +1,33 @@
+{% load static %}
+{% include 'tags/navigation.html' %}
+{% load search_tags %}
+
+{%block content %}
+{% for p in results %}
+
+   <div id="content">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                    <a href="/spiritbuzz/category/{{ p.category.slug }}/product/{{ p.slug }}">
+                    <img class="img-responsive" src="{{p.picture.url}}"></a>
+
+                    <h3><a href="/spiritbuzz/category/{{ p.category.slug }}/product/{{ p.slug }}">{{p.name}}</a></h3>
+                    <p>{{p.description}}</p>
+                    </div>
+                    {% endfor %}
+
+</div>
+</div>
+</div>
+
+
+            <div id="pagination">{% pagination_links request paginator %}
+            {% endblock %}
+            </div>
+
+            <div id="footer">
+             SPIRITBUZZ ©2014
+            </div>
+
+

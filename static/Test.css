@@ -1,0 +1,475 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* Smartphones (portrait and LANDSCAPE) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+
+}
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : LANDSCAPE) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 980px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+
+@font-face {
+        font-family:"Open Sans";
+        src: url('871246338-OpenSans-Regular.eot');
+        src: url('871246338-OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('871246338-OpenSans-Regular.svg#Open Sans') format('svg'),
+        url('871246338-OpenSans-Regular.woff') format('woff'),
+        url('OpenSans-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Open Sans Semibold";
+        src: url('11291504-OpenSans-Semibold.eot');
+        src: url('11291504-OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('11291504-OpenSans-Semibold.svg#Open Sans Semibold') format('svg'),
+        url('11291504-OpenSans-Semibold.woff') format('woff'),
+        url('11291504-OpenSans-Semibold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+Body{
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+font-size:11px;
+letter-spacing:.2em;
+}
+
+
+#page{
+width:980px;
+margin: 25px auto 20px;
+padding-top:70px;
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+font-size:11px;
+letter-spacing:.2em;
+}
+
+#container{
+overflow:hidden;
+}
+
+/**********************
+'a' These are the styles for the main navigation links. Includes both left navigation and centered category links.
+**********************/
+a{
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+display:block;
+outline: none;
+
+}
+
+a:hover{
+color:#336699;
+}
+
+#leftnavigation{
+width:130px;
+line-height:20px;
+float:left;
+
+}
+
+#content{
+width:100%;
+margin: 0;
+padding: 0;
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+font-size:11px;
+letter-spacing:.2em;
+}
+
+#mainimage{
+width:100%;
+margin: 0;
+padding: 0;
+background:url(bottles.jpg);
+background-repeat:no-repeat;
+background-position:center;
+height:580px;
+}
+
+#categorymobile{
+    display:none;
+}
+
+
+#content, aboutus{
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 50px;
+    width:100%;
+}
+
+/*****************
+'h1' and 'header' refers to the Spiritbuzz logo in the header that links back to homepage.
+******************/
+
+
+h1{
+	text-decoration:none;
+    width : 64.5%;
+    margin : 0;
+    padding : 0;
+	background:url(spiritbuzz%20logo.jpg);
+	background-repeat:no-repeat;
+	float:right;
+	padding-top:20px;
+	outline: none;
+    border:0;
+    font-weight:normal;
+
+    }
+
+h1 a {
+    display : block;
+    height : 250px;
+    outline: none;
+    border:0;
+    text-indent : -9999px;
+    font-weight:normal;
+
+}
+
+#header{
+width:100%;
+height:300px;
+margin: 0 0 5px 0px;
+background-repeat:no-repeat;
+background-position:center;
+line-height:25px;
+border:0;
+}
+
+#headertitle{
+width:100%;
+height:40px;
+margin: 0 0 5px 0px;
+font-size:54px;
+background-position:center;
+
+}
+
+/**************
+'h3' refers to the name/link of the product on the category page.
+And on the product page it refers to the listed name and price including the 'add cart' text.
+***************/
+
+h3{
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+
+/***************
+'p' is the block description of the product on the product page.
+****************/
+p{
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+font-size:11px;
+letter-spacing:.2em;
+}
+
+label{
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+
+/****************
+'navigation' and 'li' refers to the category links at the center of the page.
+*****************/
+#navigation{
+width:50%;
+height:50px;
+margin: 0 auto;
+font-family:"Open Sans";
+}
+
+li{
+display:inline-block;
+text-decoration: none;
+width:15%;
+text-align:center;
+font-family:"Open Sans";
+}
+
+
+/******************
+user_form is the register form.
+*******************/
+#user_form{
+   	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	font-family:"Open Sans";
+	font-size:11px;
+    letter-spacing:.2em;
+	background: #ffffff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	font-weight:normal;
+	}
+
+#col-md-4, form, input{
+ font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+}
+
+
+
+#user_form, username{
+    width:50%;
+    font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+}
+
+#user_form, input{
+    width: 50%;
+    padding: 15px 25px;
+    font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+
+#user_form, input, submit, label{
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+
+#user_form, input:hover {
+	background: #ffffff;
+    color: #000000;
+}
+
+
+#login_form {
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+width: 50%;
+margin: 0 auto;
+position: relative;
+background: #ffffff;
+border: 1px solid #f5f5f5;
+border-radius: 5px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+
+}
+
+#login_form, input{
+    width: 100%;
+    padding: 15px 25px;
+ font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+#login_form, username{
+    width:50%;
+    font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+#login_form, input, username, password, text {
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+
+#login_form, input:hover {
+	background: #f5f5f5;
+    color: #000000;
+
+}
+#login_form, input:focus {
+    outline:none;
+}
+
+#login_form, input, submit{
+    background: #ffffff;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+font-family: "Open Sans Semibold";
+text-decoration:none;
+color:#333333;
+text-transform: uppercase;
+font-size:11px;
+letter-spacing:.2em;
+
+}
+
+
+#registerhere{
+	height:40px;
+    padding-top:15px;
+    padding-bottom:90px;
+}
+
+
+#checkoutform, input, submit{
+    margin: 0 auto;
+    position:relative;
+
+}
+#chckoutleft{
+float:left;
+width:460px;
+padding-right:30px;
+padding-bottom:50px;
+}
+
+#chckoutright{
+float:left;
+width:460px;
+padding-bottom:50px;
+
+}
+
+#searchbox{
+height:5px;
+width:170px;
+margin-left:800px;
+}
+
+#pagination{
+font-size:11px;
+padding-bottom:40px;
+}
+
+#footer{
+width:100%;
+height:70px;
+clear: both;
+padding-top: 20px;
+margin-bottom: 20px;
+padding-bottom: 10px;
+font-size:11px;
+text-align:center;
+letter-spacing:.2em;
+font-family: "Open Sans Semibold";
+
+}
+
+#add_review{
+    cursor:pointer;
+}
+.hidden{display:none;}
+.visible{display:block;}
+.new_review{background-color:AliceBlue;}

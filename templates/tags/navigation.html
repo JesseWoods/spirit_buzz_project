@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+{% load search_tags %}
+{% block site_wrapper %}
+<div id="page">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen and (max-width: 480px) " href="{% static "mobile.css" %}" />
+<link rel="stylesheet" media="screen and (min-width: 980px)" href="{% static "Test.css" %}" />
+<link rel="stylesheet" href="{% static "producttable.css" %}"/>
+<link rel="stylesheet" href="{% static "producttable2.css" %}"/>
+
+<style>
+@font-face{
+font-family: "Open Sans";
+src: url('871246338-OpenSans-Regular.eot');
+src: url('871246338-OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+url('871246338-OpenSans-Regular.svg#Open Sans') format('svg'),
+url('871246338-OpenSans-Regular.woff') format('woff'),
+url('871246338-OpenSans-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+</style>
+
+</head>
+
+{% search_box request %}
+
+
+<div id = "leftnavigation">
+
+
+    <a href = "/spiritbuzz/cart/" class = "hidemobile">View Cart</a>
+    <a href = "/spiritbuzz/" class="hidemobile">Events</a>
+    <a href = "/spiritbuzz/" class="hidemobile">About Us</a>
+    <a href = "/spiritbuzz/register/" class="hidemobile">Register</a>
+    <a href = "/spiritbuzz/login/" class="hidemobile">Log In</a>
+
+</div>
+
+
+
+ <div id="header">
+     <h1><a href="/spiritbuzz/">SPIRITBUZZ</a></h1>
+</div>
+
+
+
+
+<div id="navigation">
+
+{% if categories %}
+        <ul>
+        {% for category in categories %}
+        <!-- Following line changed to add an HTML hyperlink -->
+        <li><a href="/spiritbuzz/category/{{ category.slug }}">{{ category.name }}</a></li>
+        {% endfor %}
+        </ul>
+       {% else %}
+        <strong>There are no categories present.</strong>
+       {% endif %}
+        </div>
+
+
+
+<div id="categorymobile">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-4 portfolio-item">
+                        <h3><a href="/spiritbuzz/category/whiskies"></a>WHISKIES</h3>
+                        <a href="/spiritbuzz/category/whiskey">
+                        <img class="img-responsive" src="/media/products/whiskey_bottle.jpg">
+                        </a>
+                        </div>
+
+
+                        <div class="col-md-4 portfolio-item">
+                        <h3><a href="/spiritbuzz/category/vodka">VODKA</a></h3>
+                        <a href="/spiritbuzz/category/vodka">
+                        <img class="img-responsive" src="/media/products/whiskey_bottle.jpg">
+                        </a>
+                        </div>
+
+
+                         <div class="col-md-4 portfolio-item">
+                        <h3><a href="/spiritbuzz/category/vodka">TEQUILA</a></h3>
+                        <a href="/spiritbuzz/category/vodka">
+                        <img class="img-responsive" src="/media/products/whiskey_bottle.jpg">
+                        </a>
+                        </div>
+
+                         <div class="col-md-4 portfolio-item">
+                        <h3><a href="/spiritbuzz/category/vodka">RUM</a></h3>
+                        <a href="/spiritbuzz/category/vodka">
+                        <img class="img-responsive" src="/media/products/whiskey_bottle.jpg">
+                        </a>
+                        </div>
+
+                         <div class="col-md-4 portfolio-item">
+                        <h3><a href="/spiritbuzz/category/vodka">LIQUEUR</a></h3>
+                        <a href="/spiritbuzz/category/vodka">
+                        <img class="img-responsive" src="/media/products/whiskey_bottle.jpg">
+                        </a>
+                        </div>
+
+                         <div class="col-md-4 portfolio-item">
+                        <h3><a href="/spiritbuzz/category/vodka">GIN</a></h3>
+                        <a href="/spiritbuzz/category/vodka">
+                        <img class="img-responsive" src="/media/products/whiskey_bottle.jpg">
+                        </a>
+                        </div>
+
+
+                    </div>
+                    </div>
+</div>
+</div>
+{% endblock %}
+{% block content %}
+{% endblock %}
+
+
+
